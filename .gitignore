@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+/client/node_modules/
+/server/node_modules/
+
+# Local Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Next.js Build Outputs
+/client/.next/
+/client/out/
+
+# TypeScript / Compilation Outputs
+dist/
+/server/dist/
+*.tsbuildinfo
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# System & OS Files
+.DS_Store
+.DS_Store?
+._*
+Thumsc.db
+ehthumbs.db
+Icon?
+[Dd]esktop.ini
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
