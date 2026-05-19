@@ -52,47 +52,47 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-800/80 bg-zinc-950/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         
         {/* Brand/Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="flex items-center justify-center h-9 w-9 rounded-xl bg-gradient-to-tr from-violet-600 to-indigo-600 shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform duration-200">
             <Radio className="h-5 w-5 text-white" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-white bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-400">
+          <span className="text-lg sm:text-xl font-bold tracking-tight text-white bg-clip-text bg-gradient-to-r from-white via-zinc-100 to-zinc-400">
             SYNC<span className="text-violet-400">UP</span>
           </span>
         </Link>
 
         {/* Navigation Links */}
-        <nav className="flex items-center gap-1.5">
+        <nav className="flex items-center gap-1 sm:gap-1.5">
           <Link
             href="/"
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium tracking-wide transition-all duration-200 ${
+            className={`flex items-center gap-1.5 px-2.5 sm:px-4 py-2 rounded-xl text-sm font-medium tracking-wide transition-all duration-200 ${
               pathname === '/'
                 ? 'bg-zinc-800/60 text-white border border-zinc-700/50 shadow-inner'
                 : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/40 border border-transparent'
             }`}
           >
-            <LayoutDashboard className="h-4 w-4" />
-            <span>Coaching Feed</span>
+            <LayoutDashboard className="h-4 w-4 shrink-0" />
+            <span className="hidden sm:inline">Coaching Feed</span>
           </Link>
           
           <Link
             href="/admin"
-            className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium tracking-wide transition-all duration-200 ${
+            className={`flex items-center gap-1.5 px-2.5 sm:px-4 py-2 rounded-xl text-sm font-medium tracking-wide transition-all duration-200 ${
               pathname === '/admin'
                 ? 'bg-zinc-800/60 text-white border border-zinc-700/50 shadow-inner'
                 : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/40 border border-transparent'
             }`}
           >
-            <UserCog className="h-4 w-4" />
-            <span>Coach Admin</span>
+            <UserCog className="h-4 w-4 shrink-0" />
+            <span className="hidden sm:inline">Coach Admin</span>
           </Link>
         </nav>
 
         {/* Status indicator */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           {getStatusBadge()}
         </div>
 

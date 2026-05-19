@@ -255,7 +255,7 @@ export default function Home() {
     <div className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col gap-8 relative overflow-hidden">
       
       {/* Dynamic Toast Container */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 max-w-md w-full">
+      <div className="fixed bottom-4 right-4 left-4 sm:bottom-6 sm:right-6 sm:left-auto z-50 flex flex-col gap-3 max-w-[calc(100vw-2rem)] sm:max-w-md w-full">
         {toasts.map(toast => {
           const style = getCategoryStyle(toast.category);
           return (
@@ -301,7 +301,7 @@ export default function Home() {
               Coaching Workspace
             </span>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-white mb-2">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2">
             Realtime <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-indigo-200 to-white">Performance Feed</span>
           </h1>
           <p className="text-zinc-400 text-sm max-w-xl">
@@ -311,7 +311,7 @@ export default function Home() {
 
         {/* Real-time Cache Status Card */}
         {sourceMetrics && (
-          <div className="flex items-center gap-5 p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-md self-start md:self-auto min-w-[280px]">
+          <div className="flex items-center gap-4 sm:gap-5 p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 backdrop-blur-md self-stretch sm:self-start md:self-auto w-full sm:w-auto sm:min-w-[280px]">
             <div className={`flex items-center justify-center h-12 w-12 rounded-xl shrink-0 ${
               sourceMetrics.source === 'cache' 
                 ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20' 
@@ -342,7 +342,7 @@ export default function Home() {
       </div>
 
       {/* Control Panel: Search & Categories */}
-      <div className="flex flex-col gap-4 p-5 rounded-2xl bg-zinc-900/30 border border-zinc-900/80 backdrop-blur-sm">
+      <div className="flex flex-col gap-4 p-4 sm:p-5 rounded-2xl bg-zinc-900/30 border border-zinc-900/80 backdrop-blur-sm">
         <div className="flex flex-col lg:flex-row lg:items-center gap-4 justify-between">
           
           {/* Search bar */}
@@ -437,7 +437,7 @@ export default function Home() {
         </div>
       ) : error ? (
         // Error State Card
-        <div className="flex flex-col items-center justify-center p-12 rounded-3xl bg-rose-500/5 border border-rose-500/10 text-center max-w-xl mx-auto my-10 gap-4 shadow-xl">
+        <div className="flex flex-col items-center justify-center p-6 sm:p-12 rounded-3xl bg-rose-500/5 border border-rose-500/10 text-center max-w-xl mx-auto my-10 gap-4 shadow-xl">
           <div className="flex items-center justify-center h-14 w-14 rounded-2xl bg-rose-500/10 text-rose-400 border border-rose-500/15">
             <AlertTriangle className="h-7 w-7" />
           </div>
@@ -461,7 +461,7 @@ export default function Home() {
         </div>
       ) : filteredFeeds.length === 0 ? (
         // Empty State Card
-        <div className="flex flex-col items-center justify-center p-16 rounded-3xl bg-zinc-900/10 border border-zinc-900/60 text-center max-w-md mx-auto my-10 gap-4">
+        <div className="flex flex-col items-center justify-center p-8 sm:p-16 rounded-3xl bg-zinc-900/10 border border-zinc-900/60 text-center max-w-md mx-auto my-10 gap-4">
           <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-zinc-900 text-zinc-500 border border-zinc-800">
             <Sparkles className="h-5 w-5" />
           </div>

@@ -130,7 +130,7 @@ export default function AdminPage() {
             Coach Dashboard
           </span>
         </div>
-        <h1 className="text-3xl font-extrabold text-white tracking-tight mb-1">
+        <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-1">
           Publish <span className="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 via-indigo-200 to-white">Coaching Updates</span>
         </h1>
         <p className="text-zinc-400 text-xs max-w-xl leading-relaxed">
@@ -170,7 +170,7 @@ export default function AdminPage() {
       {/* Glassmorphic Form Card */}
       <form 
         onSubmit={handleSubmit}
-        className="p-6 sm:p-8 rounded-3xl bg-zinc-900/35 border border-zinc-800/80 backdrop-blur-md flex flex-col gap-6 shadow-xl"
+        className="p-4 sm:p-8 rounded-3xl bg-zinc-900/35 border border-zinc-800/80 backdrop-blur-md flex flex-col gap-6 shadow-xl"
       >
         
         {/* Section Header */}
