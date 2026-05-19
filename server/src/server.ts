@@ -18,7 +18,7 @@ const httpServer = createServer(app);
 
 // Configure CORS for Express
 app.use(cors({
-  origin: [FRONTEND_URL, 'http://127.0.0.1:3000'],
+  origin: [FRONTEND_URL, 'http://127.0.0.1:3000', 'https://syncup-task.vercel.app'],
   methods: ['GET', 'POST'],
   credentials: true
 }));
@@ -28,7 +28,7 @@ app.use(express.json());
 // Set up Socket.IO with CORS
 const io = new Server(httpServer, {
   cors: {
-    origin: [FRONTEND_URL, 'http://127.0.0.1:3000'],
+    origin: [FRONTEND_URL, 'http://127.0.0.1:3000', 'https://syncup-task.vercel.app'],
     methods: ['GET', 'POST'],
     credentials: true
   },
