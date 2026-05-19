@@ -79,7 +79,7 @@ const startServer = async () => {
     });
   } catch (error) {
     console.error('[Server] Critical boot error:', error);
-    process.exit(1);
+    throw error;
   }
 };
 
