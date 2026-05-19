@@ -83,4 +83,10 @@ const startServer = async () => {
   }
 };
 
-startServer();
+startServer().catch((error) => {
+  console.error('[Server] Fatal startup error during boot:', error);
+  // Give Node.js streams 1 second to completely flush to the cloud log collector
+  setTimeout(() => {
+    process.exit(1);
+  }, 1000);
+});

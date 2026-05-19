@@ -6,8 +6,7 @@ dotenv.config();
 const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  console.error('[Database] Error: MONGODB_URI is not defined in environment variables.');
-  process.exit(1);
+  throw new Error('[Database] Error: MONGODB_URI is not defined in environment variables.');
 }
 
 export const connectDB = async (): Promise<void> => {
